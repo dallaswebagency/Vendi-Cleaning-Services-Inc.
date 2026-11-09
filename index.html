@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vendi Cleaning Services | Professional Cleaning in Calgary, Airdrie, Chestermere &amp; Cochrane</title>
+<meta name="description" content="Residential, move-in/move-out, Airbnb, carpet, office, restaurant and post-construction cleaning in Calgary, Airdrie, Chestermere and Cochrane. Eco-friendly products, insured team, satisfaction guaranteed.">
+<link rel="icon" href="images/vendi-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0e12;
+  --ink-2:#2b2d35;
+  --mute:#686b76;
+  --paper:#f4f3ef;
+  --white:#ffffff;
+  --blue:#2148d6;
+  --blue-deep:#1633a3;
+  --sky:#9fd6f7;
+  --line:#0d0e12;
+  --soft:#e6e5df;
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Hanken Grotesk",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.h-disp{font-family:var(--display);font-stretch:112%;font-weight:850;letter-spacing:-.02em;line-height:.95}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-stretch:118%;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.tag::before{content:"";width:10px;height:10px;border:2px solid currentColor}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-stretch:110%;font-weight:700;font-size:15px;letter-spacing:.02em;padding:16px 26px;border:2px solid var(--ink);transition:.25s}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:var(--blue);border-color:var(--blue)}
+.btn-line:hover{background:var(--ink);color:var(--white)}
+.btn svg{width:18px;height:18px}
+
+/* ---------- top line ---------- */
+.topline{background:var(--ink);color:#cfd1d8;font-size:13.5px}
+.topline .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 0}
+.topline .areas span{color:var(--sky)}
+.topline a:hover{color:var(--white)}
+.topline .tl-right{display:flex;gap:22px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(244,243,239,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo img{height:66px;width:auto}
+nav ul{display:flex;list-style:none;gap:34px;font-weight:600;font-size:15.5px}
+nav a{position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--blue);transition:.25s}
+nav a:hover::after,nav a.on::after{width:100%}
+.hd-cta{display:flex;align-items:center;gap:18px}
+.hd-phone{font-family:var(--display);font-stretch:110%;font-weight:700;font-size:15px}
+.hd-cta .btn{padding:12px 20px}
+.burger{display:none;width:44px;height:44px;border:2px solid var(--ink);position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--ink)}
+.burger i:nth-child(1){top:14px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:26px}
+
+/* ---------- hero ---------- */
+.hero{padding:70px 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+.hero-copy{padding-top:26px}
+.hero-title{position:relative;margin:26px 0 34px;padding:44px 0 0 34px}
+.hero-title .frame{position:absolute;left:0;top:0;width:74%;height:calc(100% + 26px);border:4px solid var(--ink);border-right:0;pointer-events:none}
+.hero-title .frame::before,.hero-title .frame::after{content:"";position:absolute;right:0;width:4px;background:var(--ink)}
+.hero-title .frame::before{top:0;height:34px}
+.hero-title .frame::after{bottom:0;height:64px}
+.hero-title h1{position:relative;font-size:clamp(52px,7.4vw,112px)}
+.hero-title h1{line-height:1}
+.hero-title h1 em{font-style:normal;color:var(--blue)}
+.hero-title .sub{position:relative;display:block;text-align:right;width:74%;padding:14px 18px 0 0;font-family:var(--display);font-stretch:105%;font-weight:600;font-size:16px}
+.hero-lead{max-width:540px;font-size:19px;color:var(--ink-2);margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:42px}
+.hero-meta{display:flex;gap:0;border-top:2px solid var(--ink)}
+.hero-meta div{flex:1;padding:18px 18px 18px 0}
+.hero-meta div+div{padding-left:18px;border-left:1px solid #c9c8c1}
+.hero-meta b{display:block;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:22px}
+.hero-meta small{color:var(--mute);font-size:13.5px}
+.hero-media{position:relative;padding:0 0 40px 40px}
+.hero-media .shot{position:relative;z-index:2;aspect-ratio:4/5;overflow:hidden;border:2px solid var(--ink)}
+.hero-media .shot img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+.hero-media .back{position:absolute;left:0;bottom:0;width:calc(100% - 40px);height:calc(100% - 40px);background:var(--blue)}
+.hero-media .stamp{position:absolute;z-index:3;left:0;bottom:70px;background:var(--white);border:2px solid var(--ink);padding:18px 20px;width:250px;box-shadow:8px 8px 0 var(--ink)}
+.stamp .stars{color:var(--blue);letter-spacing:3px;font-size:16px}
+.stamp b{display:block;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:18px;margin:4px 0 2px}
+.stamp small{font-size:13px;color:var(--mute)}
+.hero-media .badge{position:absolute;z-index:3;right:-12px;top:34px;background:var(--ink);color:var(--white);padding:14px 16px;font-family:var(--display);font-stretch:115%;font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;line-height:1.35}
+.hero-media .badge span{color:var(--sky)}
+
+/* marquee of services */
+.runner{margin-top:70px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--white);overflow:hidden}
+.runner-track{display:flex;width:max-content;animation:run 38s linear infinite}
+.runner-track span{font-family:var(--display);font-stretch:120%;font-weight:800;font-size:22px;text-transform:uppercase;padding:18px 28px;display:flex;align-items:center;gap:28px;white-space:nowrap}
+.runner-track span::after{content:"";width:14px;height:14px;border:3px solid var(--blue)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ---------- services index ---------- */
+.svc{padding:120px 0 110px}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.sec-head h2{font-size:clamp(40px,5vw,72px);margin-top:16px}
+.sec-head p{color:var(--ink-2);max-width:470px;justify-self:end}
+.svc-board{display:grid;grid-template-columns:.95fr 1.05fr;border:2px solid var(--ink);background:var(--white)}
+.svc-list{border-right:2px solid var(--ink)}
+.svc-item{width:100%;display:grid;grid-template-columns:64px 1fr 30px;align-items:center;text-align:left;padding:22px 26px;border-bottom:1px solid #d5d4cd;transition:.2s;position:relative}
+.svc-item:last-child{border-bottom:0}
+.svc-item .n{font-family:var(--display);font-stretch:110%;font-weight:600;font-size:14px;color:var(--mute)}
+.svc-item .t{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:clamp(19px,1.8vw,24px);letter-spacing:-.01em}
+.svc-item .t small{display:block;font-family:var(--body);font-weight:500;font-size:13.5px;color:var(--mute);letter-spacing:0;margin-top:2px}
+.svc-item .ar{width:28px;height:28px;border:2px solid currentColor;display:grid;place-items:center;transition:.2s}
+.svc-item .ar svg{width:14px;height:14px}
+.svc-item:hover{background:var(--paper)}
+.svc-item.on{background:var(--ink);color:var(--white)}
+.svc-item.on .n,.svc-item.on .t small{color:#a9acb6}
+.svc-item.on .ar{background:var(--blue);border-color:var(--blue)}
+.svc-panel{position:relative;scroll-margin-top:90px}
+.pane{display:none;height:100%;flex-direction:column}
+.pane.on{display:flex;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pane-img{aspect-ratio:16/9;overflow:hidden;border-bottom:2px solid var(--ink);position:relative}
+.pane-img img{width:100%;height:100%;object-fit:cover}
+.pane-img .price{position:absolute;right:0;bottom:0;background:var(--blue);color:var(--white);padding:12px 18px;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:20px;border-left:2px solid var(--ink);border-top:2px solid var(--ink)}
+.pane-img .price small{display:block;font-family:var(--body);font-weight:500;font-size:12px;opacity:.85;letter-spacing:.04em}
+.pane-body{padding:30px 34px 34px;flex:1;display:flex;flex-direction:column}
+.pane-body h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:28px;margin-bottom:8px}
+.pane-body > p{color:var(--ink-2);margin-bottom:20px}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-bottom:26px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.checks li::before{content:"";flex:0 0 18px;height:18px;margin-top:2px;border:2px solid var(--ink);background:linear-gradient(var(--blue),var(--blue)) center/8px 8px no-repeat}
+.pane-body .btn{align-self:flex-start;margin-top:auto}
+
+/* ---------- pricing ---------- */
+.pricing{background:var(--ink);color:var(--white);padding:110px 0 120px;position:relative;overflow:hidden}
+.pricing::before{content:"";position:absolute;right:-160px;top:-160px;width:380px;height:380px;border:3px solid #22242d}
+.pricing .wrap{position:relative;z-index:1}
+.pricing .tag{color:var(--sky)}
+.pricing .sec-head p{color:#b9bcc6}
+.calc{display:grid;grid-template-columns:1.25fr .75fr;border:2px solid #3a3d48;position:relative;z-index:1}
+.calc-in{padding:40px}
+.calc-step{margin-bottom:34px}
+.calc-step:last-child{margin-bottom:0}
+.calc-step label{display:block;font-family:var(--display);font-stretch:115%;font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#9da1ad;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:11px 16px;border:2px solid #444855;font-weight:600;font-size:15px;transition:.2s}
+.chip:hover{border-color:var(--sky)}
+.chip.on{background:var(--white);color:var(--ink);border-color:var(--white)}
+.calc-out{background:var(--blue);padding:40px;display:flex;flex-direction:column;border-left:2px solid #3a3d48}
+.calc-out .lbl{font-family:var(--display);font-stretch:115%;font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.calc-out .amt{font-family:var(--display);font-stretch:112%;font-weight:900;font-size:clamp(44px,5vw,68px);line-height:1;margin:16px 0 10px;letter-spacing:-.02em}
+.calc-out .what{font-size:15px;opacity:.92;margin-bottom:24px}
+.calc-out .note{font-size:13.5px;opacity:.85;border-top:1px solid rgba(255,255,255,.3);padding-top:16px;margin-top:auto;margin-bottom:22px}
+.calc-out .btn{background:var(--white);color:var(--ink);border-color:var(--white);justify-content:center}
+.calc-out .btn:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+
+/* package matrix */
+.matrix{margin-top:70px;position:relative;z-index:1}
+.matrix h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:30px;margin-bottom:22px}
+.mx{width:100%;border-collapse:collapse;font-size:15.5px}
+.mx th,.mx td{padding:15px 18px;border-bottom:1px solid #2f323c;text-align:center}
+.mx th:first-child,.mx td:first-child{text-align:left}
+.mx thead th:first-child{font-family:var(--body);font-weight:500;font-size:14px;color:#9da1ad;max-width:380px;line-height:1.45}
+.mx thead th{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:18px;border-bottom:2px solid var(--white);vertical-align:bottom}
+.mx thead th small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:#9da1ad;margin-top:4px}
+.mx thead th.hl{background:var(--blue)}
+.mx td.hl{background:rgba(33,72,214,.18)}
+.mx .y{display:inline-block;width:20px;height:20px;border:2px solid var(--sky);background:linear-gradient(var(--sky),var(--sky)) center/8px 8px no-repeat}
+.mx .x{color:#555966}
+.mx tbody tr:hover td{background:rgba(255,255,255,.04)}
+.notincl{margin-top:30px;border:2px solid #3a3d48}
+.notincl summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;justify-content:space-between;font-family:var(--display);font-stretch:110%;font-weight:700}
+.notincl summary::-webkit-details-marker{display:none}
+.notincl summary::after{content:"+";font-size:22px;line-height:1}
+.notincl[open] summary::after{content:"–"}
+.notincl ul{columns:3;column-gap:30px;padding:0 22px 22px 40px;color:#b9bcc6;font-size:14.5px}
+.notincl li{margin-bottom:6px;break-inside:avoid}
+
+/* ---------- about ---------- */
+.about{padding:120px 0}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.about-img{position:relative}
+.about-img .a1{aspect-ratio:1/1;object-fit:cover;width:100%;border:2px solid var(--ink)}
+.about-img .a2{position:absolute;right:-30px;bottom:-40px;width:46%;aspect-ratio:3/4;object-fit:cover;border:2px solid var(--ink);outline:10px solid var(--paper)}
+.about-img .corner{position:absolute;left:-18px;top:-18px;width:90px;height:90px;border-left:4px solid var(--blue);border-top:4px solid var(--blue)}
+.about h2{font-size:clamp(38px,4.4vw,62px);margin:16px 0 26px}
+.about h2 em{font-style:normal;color:var(--blue)}
+.about .txt p{color:var(--ink-2);margin-bottom:16px}
+.who{margin:30px 0 0;padding-top:24px;border-top:2px solid var(--ink)}
+.who h4{font-family:var(--display);font-stretch:115%;font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.who-tags{display:flex;flex-wrap:wrap;gap:8px}
+.who-tags span{border:1.5px solid var(--ink);padding:7px 13px;font-size:14.5px;font-weight:600;background:var(--white)}
+
+/* promises */
+.promises{display:grid;grid-template-columns:repeat(4,1fr);margin-top:110px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.promise{padding:34px 28px 36px;position:relative}
+.promise+.promise{border-left:2px solid var(--ink)}
+.promise .num{font-family:var(--display);font-stretch:120%;font-weight:900;font-size:56px;line-height:1;color:transparent;-webkit-text-stroke:2px var(--ink);margin-bottom:20px}
+.promise:hover .num{color:var(--blue);-webkit-text-stroke-color:var(--blue)}
+.promise h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:20px;margin-bottom:8px}
+.promise p{font-size:15px;color:var(--ink-2)}
+
+/* ---------- reviews ---------- */
+.reviews{padding:0 0 120px}
+.rv-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:44px;flex-wrap:wrap}
+.rv-top h2{font-size:clamp(38px,4.6vw,64px);margin-top:16px}
+.rv-score{display:flex;align-items:center;gap:20px;border:2px solid var(--ink);background:var(--white);padding:16px 22px}
+.rv-score img{height:26px;width:auto}
+.rv-score b{font-family:var(--display);font-stretch:115%;font-weight:900;font-size:22px;display:block;line-height:1.1}
+.rv-score small{color:var(--mute);font-size:13.5px}
+.rv-score .stars{color:#f5b301;letter-spacing:2px}
+.rv-wall{columns:3;column-gap:22px}
+.rv{break-inside:avoid;margin-bottom:22px;background:var(--white);border:2px solid var(--ink);padding:26px 26px 22px;position:relative}
+.rv:nth-child(3n+2){background:var(--sky)}
+.rv:nth-child(5){background:var(--ink);color:var(--white)}
+.rv:nth-child(5) .who-r small{color:#a9acb6}
+.rv .q{font-family:var(--display);font-stretch:105%;font-weight:600;font-size:19px;line-height:1.4;margin-bottom:20px}
+.rv .stars{color:#f5b301;font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.who-r{display:flex;align-items:center;gap:12px}
+.who-r .av{width:38px;height:38px;border:2px solid currentColor;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px}
+.who-r b{display:block;font-size:15px;line-height:1.2}
+.who-r small{color:var(--mute);font-size:13px}
+
+/* ---------- quote ---------- */
+.quote{background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.q-grid{display:grid;grid-template-columns:.8fr 1.2fr}
+.q-side{padding:90px 60px 90px 0;border-right:2px solid var(--ink);position:relative}
+.q-side h2{font-size:clamp(38px,4.4vw,60px);margin:16px 0 22px}
+.q-side > p{color:var(--ink-2);margin-bottom:36px;max-width:400px}
+.q-lines a,.q-lines div{display:flex;align-items:center;gap:16px;padding:16px 0;border-top:1px solid #d5d4cd;font-weight:600}
+.q-lines a:last-child,.q-lines div:last-child{border-bottom:1px solid #d5d4cd}
+.q-lines .ic{width:40px;height:40px;border:2px solid var(--ink);display:grid;place-items:center;flex:0 0 40px}
+.q-lines .ic svg{width:18px;height:18px}
+.q-lines small{display:block;font-weight:500;color:var(--mute);font-size:13px}
+.q-lines a:hover .ic{background:var(--blue);border-color:var(--blue);color:var(--white)}
+.socials{display:flex;gap:10px;margin-top:28px}
+.socials a{width:44px;height:44px;border:2px solid var(--ink);display:grid;place-items:center;transition:.2s}
+.socials a:hover{background:var(--ink);color:var(--white)}
+.socials svg{width:18px;height:18px}
+.q-form{padding:90px 0 90px 60px}
+.steps-bar{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:38px;border:2px solid var(--ink)}
+.steps-bar span{padding:13px 16px;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:13.5px;color:var(--mute);display:flex;gap:10px;align-items:center}
+.steps-bar span+span{border-left:2px solid var(--ink)}
+.steps-bar span i{font-style:normal;width:24px;height:24px;border:2px solid currentColor;display:grid;place-items:center;font-size:12px}
+.steps-bar span.on{background:var(--ink);color:var(--white)}
+.steps-bar span.done{color:var(--blue)}
+.fstep{display:none}
+.fstep.on{display:block;animation:fade .4s ease}
+.fstep h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:26px;margin-bottom:20px}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:30px}
+.type{display:flex;align-items:center;gap:14px;border:2px solid var(--ink);padding:15px 16px;font-weight:600;text-align:left;transition:.2s;background:var(--paper)}
+.type i{width:20px;height:20px;border:2px solid var(--ink);flex:0 0 20px;position:relative;background:var(--white)}
+.type:hover{background:var(--white)}
+.type.on{background:var(--ink);color:var(--white)}
+.type.on i{border-color:var(--white);background:linear-gradient(var(--sky),var(--sky)) center/10px 10px no-repeat var(--ink)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:700;font-size:14px}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;padding:14px 15px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);outline:none;border-radius:0}
+.field input:focus,.field select:focus,.field textarea:focus{background:var(--white);border-color:var(--blue)}
+.field textarea{min-height:110px;resize:vertical}
+.budget-row{display:flex;align-items:center;gap:18px}
+.budget-row input[type=range]{flex:1;accent-color:var(--blue);padding:0;border:0;background:none}
+.budget-row output{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:20px;min-width:80px;text-align:right}
+.f-nav{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.f-nav .back{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.f-done{display:none;border:2px solid var(--ink);padding:40px;background:var(--paper)}
+.f-done.on{display:block;animation:fade .4s ease}
+.f-done h3{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:30px;margin-bottom:10px}
+.err{color:#c62828;font-size:14px;font-weight:600;margin-top:-14px;margin-bottom:18px;display:none}
+
+/* ---------- areas ---------- */
+.areas-sec{padding:100px 0}
+.areas-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink)}
+.area{padding:34px 28px;position:relative;background:var(--white);transition:.25s}
+.area+.area{border-left:2px solid var(--ink)}
+.area:hover{background:var(--blue);color:var(--white)}
+.area small{font-family:var(--display);font-stretch:115%;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.65}
+.area b{display:block;font-family:var(--display);font-stretch:118%;font-weight:900;font-size:clamp(26px,2.6vw,38px);margin-top:28px;letter-spacing:-.01em}
+.areas-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:30px;flex-wrap:wrap}
+.areas-head h2{font-size:clamp(34px,4vw,54px);margin-top:14px}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#c4c6ce;padding:90px 0 0}
+.f-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:50px;padding-bottom:70px}
+.f-logo img{height:84px;width:auto;filter:invert(1)}
+.f-top p{font-size:15px;margin-top:22px;max-width:320px}
+footer h5{font-family:var(--display);font-stretch:115%;font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:20px}
+footer ul{list-style:none}
+footer li{margin-bottom:11px;font-size:15px}
+footer a:hover{color:var(--sky)}
+.f-big{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(70px,17vw,250px);line-height:.8;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:2px #33363f;text-align:center;user-select:none;overflow:hidden;white-space:nowrap}
+.f-bot{border-top:1px solid #2c2f38;display:flex;justify-content:space-between;gap:20px;padding:24px 0;font-size:14px;flex-wrap:wrap}
+.f-bot a{color:var(--white);font-weight:600}
+.f-bot a:hover{color:var(--sky)}
+
+/* reveal */
+.rv-in{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv-in.vis{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  nav,.hd-phone{display:none}
+  .burger{display:block}
+  nav.open{display:block;position:absolute;top:84px;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink)}
+  nav.open ul{flex-direction:column;gap:0;padding:10px 4vw 20px}
+  nav.open li a{display:block;padding:14px 0;border-bottom:1px solid #d5d4cd}
+  .hero-grid,.svc-board,.calc,.about-grid,.q-grid{grid-template-columns:1fr}
+  .hero-media{max-width:560px}
+  .sec-head{grid-template-columns:1fr;gap:16px}
+  .sec-head p{justify-self:start}
+  .svc-list{border-right:0;border-bottom:2px solid var(--ink)}
+  .calc-out{border-left:0;border-top:2px solid #3a3d48}
+  .promises{grid-template-columns:1fr 1fr}
+  .promise:nth-child(3){border-left:0}
+  .promise:nth-child(n+3){border-top:2px solid var(--ink)}
+  .rv-wall{columns:2}
+  .q-side{padding:70px 0 50px;border-right:0;border-bottom:2px solid var(--ink)}
+  .q-form{padding:50px 0 70px}
+  .areas-row{grid-template-columns:1fr 1fr}
+  .area:nth-child(3){border-left:0}
+  .area:nth-child(n+3){border-top:2px solid var(--ink)}
+  .f-top{grid-template-columns:1fr 1fr}
+  .about-img{max-width:560px;margin-bottom:40px}
+  .mx-wrap{overflow-x:auto}
+  .mx{min-width:640px}
+  .notincl ul{columns:2}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .topline .areas{display:none}
+  .topline .wrap{justify-content:center}
+  header .wrap{height:72px}
+  nav.open{top:72px}
+  .logo img{height:48px}
+  .hd-cta .btn{display:none}
+  .hero{padding-top:40px}
+  .hero-title{padding:30px 0 0 20px}
+  .hero-title .frame{width:88%}
+  .hero-title .sub{width:88%}
+  .hero-meta{flex-direction:column}
+  .hero-meta div+div{border-left:0;padding-left:0;border-top:1px solid #c9c8c1}
+  .hero-media{padding:0 0 24px 24px}
+  .hero-media .back{width:calc(100% - 24px);height:calc(100% - 24px)}
+  .hero-media .stamp{width:210px;bottom:44px}
+  .checks,.types,.fields{grid-template-columns:1fr}
+  .pane-body{padding:26px 22px}
+  .calc-in,.calc-out{padding:28px 22px}
+  .promises,.areas-row{grid-template-columns:1fr}
+  .promise+.promise,.area+.area{border-left:0;border-top:2px solid var(--ink)}
+  .rv-wall{columns:1}
+  .about-img .a2{right:-10px}
+  .steps-bar span{font-size:0;justify-content:center}
+  .steps-bar span i{font-size:12px}
+  .notincl ul{columns:1}
+  .f-top{grid-template-columns:1fr}
+  .svc,.about,.pricing{padding:80px 0}
+  .pricing::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topline">
+  <div class="wrap">
+    <div class="areas">Serving <span>Calgary · Airdrie · Chestermere · Cochrane</span></div>
+    <div class="tl-right">
+      <a href="mailto:contact@vendiclean.ca">contact@vendiclean.ca</a>
+      <a href="tel:+15872226887">(587) 222-6887</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Vendi Cleaning Services home"><img src="images/vendi-logo.png" alt="Vendi Cleaning Services"></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#top" class="on">Home</a></li>
+        <li><a href="https://vendiclean.ca/gallery/">Gallery</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#quote">Contact Us</a></li>
+        <li><a href="https://vendiclean.ca/terms-and-conditions/">Terms And Conditions</a></li>
+      </ul>
+    </nav>
+    <div class="hd-cta">
+      <a class="hd-phone" href="tel:+15872226887">(587) 222-6887</a>
+      <a class="btn btn-ink" href="#quote">Get a Quote</a>
+      <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="tag">Vendi Cleaning Services</span>
+      <div class="hero-title">
+        <div class="frame"></div>
+        <h1 class="h-disp"><span>Professional</span><br><span>cleaning</span><br><span><em>services.</em></span></h1>
+        <span class="sub">Calgary &amp; surrounding area</span>
+      </div>
+      <p class="hero-lead">Residential, office, Airbnb, carpet and post-construction cleaning with detailed, eco-friendly results that leave every space fresh, sanitized and move-in ready.</p>
+      <div class="hero-actions">
+        <a class="btn btn-ink" href="#quote">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#prices">See Prices</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>From $129</b><small>Recurring home cleaning</small></div>
+        <div><b>4 communities</b><small>Calgary, Airdrie, Chestermere, Cochrane</small></div>
+        <div><b>Re-clean free</b><small>If anything is missed</small></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="back"></div>
+      <div class="shot"><img src="images/vendi-team.jpg" alt="Vendi Cleaning Services team in front of a client home"></div>
+      <div class="badge">Fully insured<br><span>Eco-friendly</span></div>
+      <div class="stamp">
+        <div class="stars">★★★★★</div>
+        <b>Excellent on Google</b>
+        <small>Based on 10 Google reviews</small>
+      </div>
+    </div>
+  </div>
+  <div class="runner" aria-hidden="true">
+    <div class="runner-track">
+      <span>Residential</span><span>Deep Cleaning</span><span>Move-In / Move-Out</span><span>Airbnb</span><span>Carpet &amp; Upholstery</span><span>Post-Construction</span><span>Office</span><span>Restaurant</span>
+      <span>Residential</span><span>Deep Cleaning</span><span>Move-In / Move-Out</span><span>Airbnb</span><span>Carpet &amp; Upholstery</span><span>Post-Construction</span><span>Office</span><span>Restaurant</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES INDEX -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div>
+        <span class="tag">01 / What we clean</span>
+        <h2 class="h-disp">Pick your clean.</h2>
+      </div>
+      <p>From routine home visits to one-time deep cleans, choose a service to see exactly what's covered.</p>
+    </div>
+
+    <div class="svc-board rv-in">
+      <div class="svc-list" role="tablist">
+        <button class="svc-item on" data-p="p1"><span class="n">01</span><span class="t">Residential<small>Routine &amp; deep cleaning</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc-item" data-p="p2"><span class="n">02</span><span class="t">Move-In / Move-Out<small>Empty-home detail clean</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc-item" data-p="p3"><span class="n">03</span><span class="t">Airbnb<small>Fast turnover cleaning</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc-item" data-p="p4"><span class="n">04</span><span class="t">Carpet &amp; Upholstery<small>Stains, odors, embedded dirt</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc-item" data-p="p5"><span class="n">05</span><span class="t">Post-Construction<small>Move-in ready finish</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc-item" data-p="p6"><span class="n">06</span><span class="t">Office &amp; Commercial<small>Workplaces, retail, clinics</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button class="svc-item" data-p="p7"><span class="n">07</span><span class="t">Restaurant<small>Kitchen, dining, restrooms</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      </div>
+
+      <div class="svc-panel">
+        <div class="pane on" id="p1">
+          <div class="pane-img"><img src="images/residential-cleaning.jpg" alt="Vendi cleaners dusting and vacuuming a living room"><div class="price"><small>RECURRING FROM</small>$129</div></div>
+          <div class="pane-body">
+            <h3>Residential Cleaning</h3>
+            <p>Comprehensive home cleaning for routine maintenance and deep cleaning, with attention to every detail.</p>
+            <ul class="checks">
+              <li>Bathrooms &amp; kitchens</li>
+              <li>Bedrooms &amp; common living areas</li>
+              <li>Mudroom, front entrance &amp; laundry room</li>
+              <li>Surfaces, fixtures &amp; floors</li>
+              <li>Spot cleaning of windows &amp; high-touch points</li>
+              <li>Deep clean: doors, frames, fans &amp; behind furniture</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Regular house cleaning">Get a Residential Quote</a>
+          </div>
+        </div>
+        <div class="pane" id="p2">
+          <div class="pane-img"><img src="images/move-out-cleaning.jpg" alt="Move-in and move-out cleaning"><div class="price"><small>MOVE IN/OUT FROM</small>$289</div></div>
+          <div class="pane-body">
+            <h3>Move-In / Move-Out Cleaning</h3>
+            <p>Everything in our Deep Cleaning package, plus the extra detail an empty home needs before handover.</p>
+            <ul class="checks">
+              <li>Everything in Deep Cleaning</li>
+              <li>Cabinetry &amp; drawers, inside and out</li>
+              <li>Closets, inside and out</li>
+              <li>Fridge &amp; stove, inside and out</li>
+              <li>Basement furnace / utility room vacuumed</li>
+              <li>Balconies &amp; decks</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Deep cleaning or move-out cleaning">Get a Move-Out Quote</a>
+          </div>
+        </div>
+        <div class="pane" id="p3">
+          <div class="pane-img"><img src="images/airbnb-cleaning.jpg" alt="Vendi cleaner making a bed for an Airbnb turnover"></div>
+          <div class="pane-body">
+            <h3>Airbnb Cleaning</h3>
+            <p>Fast turnover cleaning focused on presentation, hygiene and consistency, so every guest walks into a space worth a five-star review.</p>
+            <ul class="checks">
+              <li>Fast turnovers between guests</li>
+              <li>Presentation-ready bedrooms</li>
+              <li>Hygiene-focused bathrooms &amp; kitchens</li>
+              <li>Same standard, every stay</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Airbnb cleaning">Get an Airbnb Quote</a>
+          </div>
+        </div>
+        <div class="pane" id="p4">
+          <div class="pane-img"><img src="images/carpet-cleaning.jpg" alt="Vendi technician deep cleaning carpet with an extractor" style="object-position:50% 40%"></div>
+          <div class="pane-body">
+            <h3>Carpet &amp; Upholstery Cleaning</h3>
+            <p>Deep cleaning that removes stains, odors and embedded dirt, using safe methods that extend the life of your carpets and furniture.</p>
+            <ul class="checks">
+              <li>Stain removal</li>
+              <li>Odor removal</li>
+              <li>Embedded dirt lifted out</li>
+              <li>Safe for families, kids &amp; pets</li>
+              <li>Carpets &amp; upholstery</li>
+              <li>Extends carpet &amp; furniture life</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Carpet/upholstery cleaning">Get a Carpet Quote</a>
+          </div>
+        </div>
+        <div class="pane" id="p5">
+          <div class="pane-img"><img src="images/post-construction-cleaning.jpg" alt="Post-construction cleaning"></div>
+          <div class="pane-body">
+            <h3>Post-Construction Cleaning</h3>
+            <p>Detailed clean-up after a build or renovation that leaves the space fresh, sanitized and move-in ready.</p>
+            <ul class="checks">
+              <li>Detailed, top-to-bottom results</li>
+              <li>Fresh &amp; sanitized finish</li>
+              <li>Move-in ready handover</li>
+              <li>Eco-friendly products</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Other">Get a Post-Construction Quote</a>
+          </div>
+        </div>
+        <div class="pane" id="p6">
+          <div class="pane-img"><img src="images/office-cleaning.jpg" alt="Vendi team cleaning an open-plan office"></div>
+          <div class="pane-body">
+            <h3>Office &amp; Commercial Cleaning</h3>
+            <p>Regular upkeep that supports a clean, healthy and productive workplace, on a schedule that suits your business.</p>
+            <ul class="checks">
+              <li>Desks &amp; workstations</li>
+              <li>Common areas</li>
+              <li>Restrooms</li>
+              <li>Floors</li>
+              <li>Retail stores &amp; car dealerships</li>
+              <li>Medical, dental offices &amp; daycares</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Office cleaning">Get an Office Quote</a>
+          </div>
+        </div>
+        <div class="pane" id="p7">
+          <div class="pane-img"><img src="images/restaurant-cleaning.jpg" alt="Restaurant cleaning"></div>
+          <div class="pane-body">
+            <h3>Restaurant Cleaning</h3>
+            <p>A sanitized, inviting space for your patrons, from the back of house to the front.</p>
+            <ul class="checks">
+              <li>Kitchen deep cleaning</li>
+              <li>Dining areas</li>
+              <li>Restrooms</li>
+              <li>Sanitized, guest-ready finish</li>
+            </ul>
+            <a class="btn btn-ink" href="#quote" data-type="Restaurant cleaning">Get a Restaurant Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="prices">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div>
+        <span class="tag">02 / Residential prices</span>
+        <h2 class="h-disp">Know your price<br>before we arrive.</h2>
+      </div>
+      <p>Pick your home size and the clean you need. Base pricing varies with bathrooms, flooring types, kids, pets and extra-dirty areas.</p>
+    </div>
+
+    <div class="calc rv-in">
+      <div class="calc-in">
+        <div class="calc-step">
+          <label>1. Home size (sq ft)</label>
+          <div class="chips" id="sizes">
+            <button class="chip on" data-i="0">Under 1,000</button>
+            <button class="chip" data-i="1">1,000 – 1,500</button>
+            <button class="chip" data-i="2">1,500 – 2,000</button>
+            <button class="chip" data-i="3">2,000 – 2,500</button>
+            <button class="chip" data-i="4">2,500 – 3,000</button>
+            <button class="chip" data-i="5">3,000 – 3,500</button>
+            <button class="chip" data-i="6">Over 3,500</button>
+          </div>
+        </div>
+        <div class="calc-step">
+          <label>2. Type of clean</label>
+          <div class="chips" id="kinds">
+            <button class="chip" data-k="one">Standard · One-time</button>
+            <button class="chip on" data-k="rec">Standard · Weekly / Biweekly</button>
+            <button class="chip" data-k="mon">Standard · Monthly</button>
+            <button class="chip" data-k="deep">Deep Clean</button>
+            <button class="chip" data-k="move">Move In / Out</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc-out">
+        <span class="lbl">Your estimate</span>
+        <div class="amt" id="amt">from $129</div>
+        <div class="what" id="what">Standard cleaning, weekly or biweekly · under 1,000 sq ft</div>
+        <div class="note">Calgary area pricing. Commercial and custom schedules are quoted individually.</div>
+        <a class="btn" href="#quote">Book this clean</a>
+      </div>
+    </div>
+
+    <div class="matrix rv-in">
+      <h3>What each package includes</h3>
+      <div class="mx-wrap">
+        <table class="mx">
+          <thead>
+            <tr><th>All packages cover bathrooms, kitchens, mudroom / front entrance, laundry room, bedrooms &amp; living areas</th><th>Standard<small>from $129</small></th><th class="hl">Deep<small>from $249</small></th><th>Move In / Out<small>from $289</small></th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Surfaces, fixtures &amp; floors</td><td><span class="y"></span></td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>Garbage areas</td><td><span class="y"></span></td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>Spot cleaning of windows &amp; high-touch points</td><td><span class="y"></span></td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>All doors &amp; frames</td><td class="x">–</td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>Light fixtures &amp; ceiling fans</td><td class="x">–</td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>Behind furniture &amp; grease traps</td><td class="x">–</td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>Interior windows &amp; sliding-door tracks</td><td class="x">–</td><td class="hl"><span class="y"></span></td><td><span class="y"></span></td></tr>
+            <tr><td>Cabinetry, drawers &amp; closets, inside and out</td><td class="x">–</td><td class="hl x">–</td><td><span class="y"></span></td></tr>
+            <tr><td>Fridge &amp; stove, inside and out</td><td class="x">–</td><td class="hl x">–</td><td><span class="y"></span></td></tr>
+            <tr><td>Basement furnace / utility room &amp; balconies / decks</td><td class="x">–</td><td class="hl x">–</td><td><span class="y"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <details class="notincl">
+        <summary>What's not included</summary>
+        <ul>
+          <li>Wall spots beyond light spot-cleaning</li>
+          <li>Personal laundry (one load of bed linens &amp; towels only)</li>
+          <li>More than one day's worth of dishes</li>
+          <li>Washing blinds</li>
+          <li>Pet waste &amp; bodily fluid cleanup</li>
+          <li>Mold (mildew only) &amp; other biohazards</li>
+          <li>Outdoor areas (except balconies &amp; decks on move-in/out)</li>
+          <li>Steam cleaning</li>
+          <li>Hardwood floor polishing</li>
+          <li>Paint removal</li>
+          <li>Exterior windows</li>
+          <li>Inside the freezer</li>
+          <li>Trash removal (placed in your outside container)</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img rv-in">
+        <span class="corner"></span>
+        <img class="a1" src="images/residential-cleaning.jpg" alt="Vendi team cleaning a bright living room" style="object-position:40% 50%">
+        <img class="a2" src="images/carpet-cleaning.jpg" alt="Carpet cleaning in progress">
+      </div>
+      <div class="txt rv-in">
+        <span class="tag">03 / About Us</span>
+        <h2 class="h-disp">Your trusted cleaning partner in <em>Calgary</em> and the surrounding area.</h2>
+        <p>With years of professional cleaning experience across Calgary, Airdrie, Chestermere and Cochrane, our trained team brings consistency, efficiency and attention to detail to every job.</p>
+        <p>We use safe, eco-friendly products that are suitable for families, children and pets, and back every clean with a quality guarantee, transparent pricing and flexible options for routine visits or one-time deep cleans.</p>
+        <div class="who">
+          <h4>Who we clean for</h4>
+          <div class="who-tags">
+            <span>Homes</span><span>Move-in / move-out</span><span>Airbnb hosts</span><span>Offices</span><span>Retail</span><span>Medical &amp; dental offices</span><span>Car dealerships</span><span>Daycares</span><span>Restaurants</span><span>Post-construction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promises rv-in">
+      <div class="promise"><div class="num">01</div><h3>Satisfaction Guaranteed</h3><p>Missed something or not quite right? We come back and re-clean it free of charge.</p></div>
+      <div class="promise"><div class="num">02</div><h3>Trusted Local Team</h3><p>Fully insured, trained professionals serving Calgary, Airdrie, Chestermere and Cochrane.</p></div>
+      <div class="promise"><div class="num">03</div><h3>Eco-Friendly Cleaning</h3><p>Products that are safe for families, pets and workplaces, with no harsh chemicals.</p></div>
+      <div class="promise"><div class="num">04</div><h3>Reliable &amp; On Time</h3><p>Scheduled visits kept on time, to the same high standard every time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rv-top rv-in">
+      <div>
+        <span class="tag">04 / Reviews</span>
+        <h2 class="h-disp">Said by clients,<br>not by us.</h2>
+      </div>
+      <div class="rv-score">
+        <svg viewBox="0 0 48 48" width="34" height="34"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-4H24v7.6h12.1c-.2 2-1.6 5-4.6 7l7.1 5.5c4.2-3.9 6.5-9.6 6.5-16.1z"/><path fill="#34A853" d="M24 46c6.1 0 11.2-2 14.9-5.4l-7.1-5.5c-1.9 1.3-4.4 2.2-7.8 2.2-5.9 0-11-3.9-12.8-9.4l-7.4 5.7C7.5 41.1 15.2 46 24 46z"/><path fill="#FBBC05" d="M11.2 27.9c-.5-1.4-.7-2.8-.7-4.3s.3-3 .7-4.3l-7.4-5.7C2.3 16.6 1.5 20 1.5 23.6s.8 7 2.3 10l7.4-5.7z"/><path fill="#EA4335" d="M24 9.9c4.2 0 7 1.8 8.6 3.3l6.3-6.2C35.1 3.5 30.1 1.3 24 1.3 15.2 1.3 7.5 6.2 3.8 13.6l7.4 5.7C13 13.8 18.1 9.9 24 9.9z"/></svg>
+        <div><b>EXCELLENT</b><span class="stars">★★★★★</span> <small>Based on 10 Google reviews</small></div>
+      </div>
+    </div>
+    <div class="rv-wall">
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"This cleaning company exceeded my expectations. The team was professional, and the quality of their work is exceptional."</p><div class="who-r"><span class="av">E</span><div><b>Elida</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"Great service! I have an Airbnb and they are really professional!"</p><div class="who-r"><span class="av">V</span><div><b>Varun Pardeshi</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"They were meticulous, and the place looked and smelled fresh. We are incredibly pleased with the results."</p><div class="who-r"><span class="av">M</span><div><b>Muhaxhiri</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"I have been using Vendi Cleaning services for sometime now. The cleaning staff have good attention to detail."</p><div class="who-r"><span class="av">J</span><div><b>J. Sprott</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"I am absolutely thrilled with the exceptional cleaning service I received from Vendi!"</p><div class="who-r"><span class="av">S</span><div><b>Scene A</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"We frequently get our STR unit cleaned by Artit and his team. Really satisfied by the results"</p><div class="who-r"><span class="av">T</span><div><b>Tarun Sanduja</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"Vendi Cleaning did a deep cleaning of my property. They were punctual and professional."</p><div class="who-r"><span class="av">F</span><div><b>Forward Managment</b><small>Google review</small></div></div></div>
+      <div class="rv rv-in"><div class="stars">★★★★★</div><p class="q">"I recently hired them to do a deep cleaning for my house and they were very professional"</p><div class="who-r"><span class="av">F</span><div><b>Franchesca Leonardo</b><small>Google review</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote" id="quote">
+  <div class="wrap q-grid">
+    <div class="q-side rv-in">
+      <span class="tag">05 / Contact Us</span>
+      <h2 class="h-disp">Get your quote in three quick steps.</h2>
+      <p>Tell us what needs cleaning and we'll get back to you with a clear, upfront price.</p>
+      <div class="q-lines">
+        <a href="tel:+15872226887"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></span><span>(587) 222-6887<small>Call or text</small></span></a>
+        <a href="mailto:contact@vendiclean.ca"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16"/><path d="m22 6-10 7L2 6"/></svg></span><span>contact@vendiclean.ca<small>Email us anytime</small></span></a>
+        <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-6 8-12a8 8 0 0 0-16 0c0 6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Calgary, Airdrie, Chestermere &amp; Cochrane<small>Service areas</small></span></div>
+      </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/vendiclean" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.9.6-1 1-1h3V1h-4c-4 0-5 3-5 5v2H6v4h3v11h5V12h3.6l.4-4z"/></svg></a>
+        <a href="https://www.instagram.com/vendiclean" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://www.tiktok.com/@vendiclean" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 1 0 5 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.3-1.6z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="q-form rv-in">
+      <div class="steps-bar" id="stepsBar">
+        <span class="on"><i>1</i>Service</span>
+        <span><i>2</i>Details</span>
+        <span><i>3</i>Contact</span>
+      </div>
+      <form id="qform" novalidate>
+        <div class="fstep on" data-s="1">
+          <h3>What type of cleaning do you need?</h3>
+          <div class="types" id="types">
+            <button type="button" class="type" data-v="Regular house cleaning"><i></i>Regular house cleaning</button>
+            <button type="button" class="type" data-v="Deep cleaning or move-out cleaning"><i></i>Deep cleaning or move-out cleaning</button>
+            <button type="button" class="type" data-v="Airbnb cleaning"><i></i>Airbnb cleaning</button>
+            <button type="button" class="type" data-v="Carpet/upholstery cleaning"><i></i>Carpet / upholstery cleaning</button>
+            <button type="button" class="type" data-v="Office cleaning"><i></i>Office cleaning</button>
+            <button type="button" class="type" data-v="Restaurant cleaning"><i></i>Restaurant cleaning</button>
+            <button type="button" class="type" data-v="Other"><i></i>Other</button>
+          </div>
+          <p class="err" id="e1">Please choose a cleaning type.</p>
+          <div class="f-nav"><span></span><button type="button" class="btn btn-ink" data-next="2">Continue</button></div>
+        </div>
+
+        <div class="fstep" data-s="2">
+          <h3>Tell us a little more</h3>
+          <div class="fields">
+            <div class="field full">
+              <label>Do you have a budget range in mind?</label>
+              <div class="budget-row"><input type="range" id="budget" min="10" max="1000" step="10" value="200"><output id="bOut">$200</output></div>
+            </div>
+            <div class="field full">
+              <label for="msg">Message</label>
+              <textarea id="msg" placeholder="Home size, number of bathrooms, preferred day, anything we should know..."></textarea>
+            </div>
+          </div>
+          <div class="f-nav"><button type="button" class="back" data-prev="1">Back</button><button type="button" class="btn btn-ink" data-next="3">Continue</button></div>
+        </div>
+
+        <div class="fstep" data-s="3">
+          <h3>Where should we send your quote?</h3>
+          <div class="fields">
+            <div class="field full"><label for="nm">Name</label><input id="nm" required></div>
+            <div class="field"><label for="em">Email</label><input id="em" type="email" required></div>
+            <div class="field"><label for="ph">Phone Number</label><input id="ph" type="tel" required></div>
+          </div>
+          <p class="err" id="e3">Please fill in your name, a valid email and phone number.</p>
+          <div class="f-nav"><button type="button" class="back" data-prev="2">Back</button><button type="submit" class="btn btn-ink">Send my request</button></div>
+        </div>
+      </form>
+      <div class="f-done" id="fdone">
+        <h3>Thanks, we've got it.</h3>
+        <p>Our team will be in touch shortly. Need it sooner? Call <a href="tel:+15872226887"><b>(587) 222-6887</b></a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas-sec">
+  <div class="wrap">
+    <div class="areas-head rv-in">
+      <div><span class="tag">06 / Service areas</span><h2 class="h-disp">Local to four communities.</h2></div>
+      <a class="btn btn-line" href="#quote">Check availability</a>
+    </div>
+    <div class="areas-row rv-in">
+      <div class="area"><small>Area 01</small><b>Calgary</b></div>
+      <div class="area"><small>Area 02</small><b>Airdrie</b></div>
+      <div class="area"><small>Area 03</small><b>Chestermere</b></div>
+      <div class="area"><small>Area 04</small><b>Cochrane</b></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a href="#top" class="f-logo"><img src="images/vendi-logo.png" alt="Vendi Cleaning Services"></a>
+        <p>Professional residential, commercial, Airbnb, carpet and post-construction cleaning in Calgary and the surrounding area.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Residential Cleaning</a></li>
+          <li><a href="#services">Move-In / Move-Out</a></li>
+          <li><a href="#services">Airbnb Cleaning</a></li>
+          <li><a href="#services">Carpet Cleaning</a></li>
+          <li><a href="#services">Office Cleaning</a></li>
+          <li><a href="#services">Restaurant Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="https://vendiclean.ca/gallery/">Gallery</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#quote">Contact Us</a></li>
+          <li><a href="https://vendiclean.ca/terms-and-conditions/">Terms And Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="tel:+15872226887">(587) 222-6887</a></li>
+          <li><a href="mailto:contact@vendiclean.ca">contact@vendiclean.ca</a></li>
+          <li>Calgary · Airdrie · Chestermere · Cochrane</li>
+          <li><a href="https://www.facebook.com/vendiclean">Facebook</a> · <a href="https://www.instagram.com/vendiclean">Instagram</a> · <a href="https://www.tiktok.com/@vendiclean">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-big" aria-hidden="true">VENDI</div>
+    <div class="f-bot">
+      <span>Copyright © 2025 Vendi Cleaning Services Inc. – All Rights Reserved.</span>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// mobile nav
+const nav=document.getElementById('nav');
+document.getElementById('burger').addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// services index
+document.querySelectorAll('.svc-item').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.svc-item').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');document.getElementById(b.dataset.p).classList.add('on');
+  if(window.innerWidth<=1080)document.querySelector('.svc-panel').scrollIntoView({behavior:'smooth',block:'start'});
+}));
+
+// price calculator (Vendi residential price table)
+const P={
+  one:['from $169','$169 – $189','$189 – $219','$219 – $239','$239 – $259','$259 – $279'],
+  rec:['from $129','$129 – $149','$149 – $179','$179 – $199','$199 – $229','$229 – $249'],
+  mon:['from $149','$149 – $189','$189 – $229','$229 – $259','$259 – $289','$289 – $329'],
+  deep:['from $249','$250 – $299','$299 – $399','$399 – $499','$499 – $589','$589 – $669'],
+  move:['from $289','$289 – $359','$359 – $419','$419 – $489','$489 – $579','$579 – $669']
+};
+const KN={one:'Standard cleaning, one-time',rec:'Standard cleaning, weekly or biweekly',mon:'Standard cleaning, monthly',deep:'Deep clean',move:'Move in / move out clean'};
+const SN=['under 1,000 sq ft','1,000 – 1,500 sq ft','1,500 – 2,000 sq ft','2,000 – 2,500 sq ft','2,500 – 3,000 sq ft','3,000 – 3,500 sq ft','over 3,500 sq ft'];
+let si=0,sk='rec';
+function calc(){
+  const amt=document.getElementById('amt');
+  amt.textContent= si===6 ? 'Let\'s talk' : P[sk][si];
+  document.getElementById('what').textContent= si===6 ? 'Homes over 3,500 sq ft get a free consultation call.' : KN[sk]+' · '+SN[si];
+}
+function chipGroup(id,cb){document.querySelectorAll('#'+id+' .chip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('#'+id+' .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');cb(c);calc();}))}
+chipGroup('sizes',c=>si=+c.dataset.i);
+chipGroup('kinds',c=>sk=c.dataset.k);
+
+// quote form
+let qType='';
+const types=document.querySelectorAll('.type');
+function pickType(v){qType=v;types.forEach(t=>t.classList.toggle('on',t.dataset.v===v));document.getElementById('e1').style.display='none'}
+types.forEach(t=>t.addEventListener('click',()=>pickType(t.dataset.v)));
+document.querySelectorAll('[data-type]').forEach(a=>a.addEventListener('click',()=>{pickType(a.dataset.type);go(1)}));
+const steps=document.querySelectorAll('.fstep'),bar=document.querySelectorAll('#stepsBar span');
+function go(n){
+  steps.forEach(s=>s.classList.toggle('on',+s.dataset.s===n));
+  bar.forEach((b,i)=>{b.classList.toggle('on',i===n-1);b.classList.toggle('done',i<n-1)});
+}
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>{
+  const n=+b.dataset.next;
+  if(n===2&&!qType){document.getElementById('e1').style.display='block';return}
+  go(n);
+}));
+document.querySelectorAll('[data-prev]').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.prev)));
+const bud=document.getElementById('budget'),bo=document.getElementById('bOut');
+bud.addEventListener('input',()=>bo.textContent='$'+bud.value);
+document.getElementById('qform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nm=document.getElementById('nm').value.trim(),em=document.getElementById('em').value.trim(),ph=document.getElementById('ph').value.trim();
+  if(!nm||!/^\S+@\S+\.\S+$/.test(em)||ph.length<7){document.getElementById('e3').style.display='block';return}
+  document.getElementById('qform').style.display='none';
+  document.getElementById('stepsBar').style.display='none';
+  document.getElementById('fdone').classList.add('on');
+});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('vis');io.unobserve(en.target)}}),{threshold:.12});
+document.querySelectorAll('.rv-in').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
